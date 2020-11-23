@@ -15,7 +15,7 @@ weatherForm.addEventListener('submit',(e)=>{
     {
         return paraOne.textContent='ERROR : Location Cant be empty. Try again'
     }
-    fetch(`http://localhost:3000/weather?address=${location}`).then((response)=>{
+    fetch(`/weather?address=${location}`).then((response)=>{
     response.json().then((parsedData)=>{
         if(parsedData.error)
         {
